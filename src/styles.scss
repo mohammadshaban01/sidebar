@@ -1,0 +1,206 @@
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------------------------
+  CSS Padding & Margin 1 to 100px Top, Bottom, Left, Right 
+-------------------------------------------------------------------------------------------*/
+$spaceamounts: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+);
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+
+    .m-#{$space} {
+        margin: #{$space}px !important;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}px !important;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
+        font-weight: bold;
+        text-align: center;
+
+        &:first-child {
+            text-align: left;
+        }
+    }
+
+    td {
+        text-align: center;
+
+        &:first-child {
+            text-align: left;
+        }
+    }
+}
+
+/* Padding left & right None */
+.p-r-0 {
+    padding-right: 0 !important;
+}
+.p-l-0 {
+    padding-left: 0 !important;
+}
+.p-t-up-130 {
+    padding-top: 130px;
+}
+
+.m-r-0 {
+    margin-right: 0 !important;
+}
+.m-l-0 {
+    margin-left: 0 !important;
+}
+
+ul {
+    margin-bottom: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+button{
+    background: transparent;
+}
+/*-------------------------------------------------------------------------------------------
+  CSS definations for 
+-------------------------------------------------------------------------------------------*/
+
+html, body { 
+    height: 100%; 
+    font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color:#000;
+}
+.mat-button-focus-overlay {
+    background:none;
+}
