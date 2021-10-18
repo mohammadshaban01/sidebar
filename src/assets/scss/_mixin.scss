@@ -1,0 +1,79 @@
+
+// Box Shadow
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {     
+    box-shadow: $x-axis $y-axis $blur $color;
+    -webkit-box-shadow: $x-axis $y-axis $blur $color;
+    -moz-shadow: $x-axis $y-axis $blur $color;    
+    -o-shadow: $x-axis $y-axis $blur $color; 
+  }
+  
+  // .box-shadow {
+  //   @include box-shadow ($base-size*1.5, $base-size*1.5, $base-size*3, $box-shadow-color);
+  // }
+
+  // .table-shadow {
+  //   @include box-shadow ($base-size*1.5, $base-size*1.5, $base-size*3, $table-shadow-color);
+  // }
+
+  // Border Radius
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+  }
+
+.border-radius{
+   @include  border-radius($base-size*4); 
+}
+ 
+
+//------------------------------------------------
+//       Gradient Header
+// ------------------------------------------------// 
+
+// @mixin background($from) {
+//   background-color: $from;
+//   background: background( $from);
+
+// }
+
+// .background-them-1 {
+//   @include background( $primary);
+// }
+
+// .background-them-2 {
+//   @include background( $secondary);
+// }
+
+
+
+
+// mat-button-toggle-group
+
+// @include mat-core();
+
+// $app-primary: mat-palette($mat-gray, 200);
+// $app-accent:  mat-palette($mat-indigo);
+
+// $app-theme: mat-light-theme($app-primary, $app-accent);
+
+// @mixin mix-app-theme($app-theme) {
+//   $primary: map-get($app-theme, primary);
+//   $accent: map-get($app-theme, accent);
+
+//   .mat-button-toggle {
+//     background-color: mat-color($primary);
+//     color: mat-color($primary, default-contrast);
+//   }
+
+//   .mat-button-toggle-checked {
+//     background-color: mat-color($accent);
+//     color: mat-color($accent, default-contrast);
+//   }
+// }
+
+// Include the mixin
+// @include mix-app-theme($app-theme);
+
+

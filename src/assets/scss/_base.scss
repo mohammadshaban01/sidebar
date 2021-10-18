@@ -1,0 +1,23 @@
+//
+// Base setting
+//
+
+// Base Font Size
+$base-size:0.125rem;                // 2 Pixels  //
+$base-font-size: 1rem;           // 16 Pixels  //
+$base-line-height:1.875rem;         // 30 Pixels  //
+
+// Font Weight
+$font-weight-light:400;
+$font-weight-regular:500;
+$font-weight-semi-bold:700;
+$font-weight-bold:bold;
+
+// Header Font Size
+$h1: $base-size*9;        // 18 Pixels  //
+$h2: $base-size*7;        // 14 Pixels  //
+$h3: $base-size*6;        // 12 Pixels  //
+$h4: $base-size*5;        // 10 Pixels  //
+$h5: $base-font-size;     // 14 Pixels  //
+$h6: $base-font-size;     // 14 Pixels  //
+

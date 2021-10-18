@@ -1,3 +1,6 @@
+
+@import "/src/assets/scss/import";
+
 mat-toolbar {
     background: #004a9f;
     color: white;
@@ -48,6 +51,73 @@ mat-sidenav-container {
             margin-top: 16px;
             margin-bottom: 16px;
             background-color: rgba(255, 255, 255, 0.5);
+        }
+        .side-bar-nav {
+
+            nav {
+               ul{
+                  padding: 0;
+               }
+                .mainmenu {
+        
+                    button {
+                        width: 100%;
+                        text-align: left;
+                        color: #fff;
+                        display: block;
+                        padding:0 $base-size*8 0 $base-size*10;
+                        line-height:$base-size*20;
+        
+                        &:first-child {
+                            border-bottom: $base-size*0.1 solid blue;
+                        }
+        
+                        img {
+                            float: right;
+                            padding: $base-size*9 0 0 0;
+                        }
+                    }
+
+                    li{
+                        button{
+                           span{
+                              font-size: $base-size*7;
+                              font-weight: normal;
+                           }
+                        }
+                    }
+        
+                    li:hover .submenu {
+                        display: block;
+                        max-height: $base-size*100;
+                    }                
+        
+                    .submenu {
+                        overflow: hidden;
+                        max-height: 0;
+                        -webkit-transition: all 0.5s ease-out;
+
+      
+                        button {
+                            background: #4978bb;
+                            color: #fff;
+                            padding-left: $base-size*28;
+                            border-radius: 0;
+        
+                            &:hover {
+                                background: $primary;
+                                color: #fff;
+                                line-height: $base-size*20;
+                            }
+        
+                            img {
+                                float: left;
+                                padding: $base-size*8 $base-size*8 0 $base-size*5;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
