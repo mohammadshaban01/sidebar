@@ -1,0 +1,97 @@
+@import "/src/assets/scss/import";
+
+.redemption {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: 26vh;
+    margin: 0$base-size * 5;
+
+    h2 {
+        font-size: $base-size * 12;
+        font-weight: bold;
+        padding: $base-size * 24 0 $base-size * 8 0;
+    }
+
+    .total-pay-balance {
+        margin-top: $base-size*16;
+        text-align: center;
+        p{
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        h6{
+            font-size: $base-size*16;
+            font-weight: bold;
+            color: $had-font-color;
+            margin-bottom: $base-size*8;
+        }
+        .balance-list {
+            display: flex;
+            justify-content: space-between;
+            h5 {
+                font-size: $base-size*6;
+            }
+        }
+    }
+
+   
+}
+.summary {
+    min-height: calc(100vh - 15rem);
+    background: $gray-bg;
+    padding-top: $base-size*10;
+    border-radius: $base-size*13 $base-size*13 0 0;
+    h2 {
+        margin: $base-size * 11 0 $base-size * 8 $base-size * 3;
+        font-size: $base-size * 10;
+        font-weight: 700;
+    }
+    
+    h3{
+        font-size: $base-size * 10;
+        font-weight: bold;
+        margin-left: $base-size*5;
+        margin-bottom: $base-size*12;
+    }
+}
+
+.summary-inner {
+    width: 91%;
+    min-height: $base-size * 43;
+    background:$primary;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: $base-size * 2;
+    box-shadow: 0 0 $base-size * 3 rgba(9, 77, 133, 0.25);
+
+    p {
+        color: $white;
+        font-size: $base-size * 9;
+        padding: $base-size * 3 0 0 $base-size * 6;
+        margin-bottom: 0;
+    }
+    h5 {
+        color: $white;
+        font-size: $base-size * 18;
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 0;
+        padding: $base-size * 0 $base-size * 5 $base-size * 1 0;
+
+        span{
+            font-size: $base-size * 9;
+            font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .redemption {
+        h2 {
+            display: none !important;
+        }
+    }
+}

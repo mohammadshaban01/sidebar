@@ -1,0 +1,48 @@
+@import "/src/assets/scss/import";
+
+.terms-conditons {
+    background-image: url( /assets/images/bg/blue-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    // height: calc(100vh - 0rem);
+
+    .flex-center {
+        height: calc(100vh - 0rem);
+
+        h2 {
+            color: $white;
+            margin: $base-size*25 0 $base-size * 16 $base-size * 12;
+            font-size: $base-size * 12;
+            font-weight: bold;
+        }
+        .terms {
+            background: $white;
+            max-height: $base-size * 225;
+            margin: 0 $base-size * 11;
+            border-radius: $base-size*4;
+            overflow-y: auto;
+            text-align: center;
+
+            p {
+                padding: $base-size * 8;
+                text-align: left;
+                font-weight: normal;
+            }
+        }
+        .terms-footer {
+            height: $base-size*40;
+            background: $white;
+            position: relative;
+            top: $base-size * -40;
+            margin: 0 $base-size * 11;
+            border-radius: 0 0 $base-size*9 $base-size*8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+               width: $base-size*60;
+                border-radius: $base-size*8;
+            }
+        }
+    }
+}

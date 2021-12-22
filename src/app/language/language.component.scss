@@ -1,0 +1,70 @@
+@import "/src/assets/scss/import";
+
+.language {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: calc(100vh - 0rem);
+    padding-bottom: $base-size * 15;
+
+    h1 {
+        margin: 0;
+        color: $primary;
+        font-weight: $font-weight-bold;
+        font-size: $base-size * 16;
+        margin-bottom: $base-size * 17;
+        margin-left: $base-size * 10;
+    }
+    h2 {
+        @extend h1;
+        font-size: $base-size * 12;
+        padding-top: $base-size * 16;
+        margin-bottom: 0;
+    }
+    .language-inn {
+        width: 76%;
+        height: $base-size * 64;
+        background: $primary;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $base-size * 4;
+        box-shadow: 0 0 $base-size * 6 rgba(0, 0, 0, 0.5);
+        button {
+            width: 100%;
+            @extend.language-inn;
+            box-shadow: none;
+            color: $white;
+            font-size: $base-size * 9;
+            font-weight: bold;
+            display: block;
+            position: relative;
+            transition-duration: 0.4s;
+            overflow: hidden;
+
+            &:after {
+                content: "";
+                background: $click-active;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: $base-size * -10;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s;
+            }
+            &:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s;
+            }
+            span {
+                display: block;
+                margin-top: $base-size*1.5;
+            }
+        }
+    }
+}

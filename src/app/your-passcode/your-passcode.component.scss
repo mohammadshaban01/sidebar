@@ -1,0 +1,87 @@
+@import "/src/assets/scss/import";
+
+.login-mobile {
+    background-image: url( /assets/images/bg/blue-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    height: calc(100vh - 0rem);
+
+    .enter-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 0rem);
+
+        p {
+            font-size: $base-size*9;
+            font-weight: normal;
+            color: $white;
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: $white;
+            font-size: $base-size * 11;
+            font-weight: bold;
+            margin-bottom: $base-font-size;
+        }
+        .mobile-otp {
+            margin-top: $base-size*10;
+
+            .security{
+                label{
+                    color: #fff;
+                    margin-bottom: 0;
+                    font-size: $base-size*7;
+                    margin-top: $base-font-size;
+
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+                .form-control {
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    border-radius: 0;
+                    line-height: $base-size*15.5;
+
+                    &:focus {
+                        border: none;
+                        border-bottom: $base-size*.5 solid $secondery;
+                    } 
+                }
+                
+                input{
+                    padding: 0;
+                    line-height: $base-size*1;
+                }
+              
+            }
+            p{
+                font-size: $base-size*6;
+                padding-top: $base-size*8;
+            }
+        }
+        .next {
+            text-align: center;
+            margin-top: $base-size * 16;
+        }
+        .terms {
+            margin-top: $base-size * 12;
+            text-align: center;
+            p {
+                font-size: $base-size * 6;
+                color: $white;
+                font-weight: lighter;
+            }
+            h3 {
+                font-size: $base-size * 6;
+                color: $white;
+                font-weight: normal;
+            }
+        }
+    }
+}

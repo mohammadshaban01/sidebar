@@ -1,0 +1,27 @@
+<div class="additional">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="enter-mobile">
+                    <div>
+                        <p>For additional security, please fill in this confidential information.</p>
+                        <div class="mobile-otp">
+                            <h4>Set Your Passcode</h4>
+                            <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+                            </ngx-otp-input>
+                        </div>
+                        <div class="mobile-otp m-t-25">
+                            <h4>Set Your Passcode</h4>
+                            <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+                            </ngx-otp-input>
+                        </div>
+                        <h6>Please enter number of your choice & set your Secret Code.</h6>
+                        <div class="next">
+                            <button class="theme-btn" mat-button  routerLink="/setup-profile">NEXT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

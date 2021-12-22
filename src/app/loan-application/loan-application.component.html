@@ -1,0 +1,42 @@
+<div class="loan-application">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2>Loan Application</h2>
+
+                <div class="lone-offer">
+                    <h3>Loan Offers</h3>
+                    <p>These are the different loan offers for you.</p>
+                </div>
+
+                <div class="row gx-3">
+                    <div class="col-md-12 col-lg-12 col-xl-6" *ngFor=" let data of month">
+                        <div class="lone-card m-b-12">
+                            <div class="lone-list b-b-w">
+                                <div>
+                                    <mat-checkbox></mat-checkbox> <span>Lender1</span>
+                                </div>
+                                <div>
+                                    <button class="theme-btn" mat-button>Deselect</button>
+                                </div>
+                            </div>
+                            <div class="lone-list">
+                                <div>
+                                    <h5>0.5%</h5>
+                                    <p>Interest</p>
+                                </div>
+                                <div class="text-end">
+                                   <h5>₹35,00,000</h5>
+                                   <p>Maximum amount</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button routerLink="/successful">></button>
+
+            </div>
+        </div>
+    </div>
+</div>

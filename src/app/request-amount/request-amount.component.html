@@ -1,0 +1,82 @@
+<div class="request-amount">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2>Request an Amount</h2>
+                <h6>Fill in the following options to establish how much
+                    you want to borrow and for how long.</h6>
+
+                <div class="row gx-3">
+                    <div class="col-md-12 col-lg-12 col-xl-6">
+                        <form class="m-t-30">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Loan Type</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </form>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12 col-xl-6">
+                        <div class="loan-amount">
+                            <div class="loan-list m-t-18">
+                                <div>
+                                    <h3>Loan Amount</h3>
+                                </div>
+                                <div class="rupes">
+                                    <p>₹ 3834384</p>
+                                </div>
+                            </div>
+
+                            <mat-slider aria-label="unit(s)"></mat-slider>
+
+                            <div class="loan-list m-t-10">
+                                <div>
+                                    <h5>₹ 0</h5>
+                                    <h4>Minimum</h4>
+                                </div>
+                                <div>
+                                    <h5>₹ 30000</h5>
+                                    <h4>Maximum</h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12 col-xl-6 m-t-20">
+                        <div class="loan-tenure">
+                            <label>Loan Tenure</label>
+                            <input type="text" (click)="toggleStatus()">
+                            <span><img src="assets/images/icons/arrow_drop_down.svg" alt="drop"></span>
+
+                            <div class="tenure-list" *ngIf="isShow">
+                                <ul>
+                                    <li>
+                                        <div class="list-inner">
+                                            <div>Less than 3 months</div>
+                                            <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"/></svg></div>
+                                        </div>    
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="check m-t-100">
+                    <section>
+                        <mat-checkbox></mat-checkbox>
+                        <span>I hereby agree to override the NDNC Registry and allow
+                            the selected lenders to contact me via SMS, Whatsapp
+                            or calls.</span>
+                    </section>
+
+                </div>
+
+                <button routerLink="/dashbord/loan-application">></button>
+
+            </div>
+        </div>
+    </div>
+
+</div>

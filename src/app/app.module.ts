@@ -37,11 +37,60 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { LanguageComponent } from './language/language.component';
+import { LoginMobileComponent } from './login-mobile/login-mobile.component';
+import { NgxOtpInputModule } from 'ngx-otp-input';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { VerificationOtpComponent } from './verification-otp/verification-otp.component';
+import { AdditionalSecurityComponent } from './additional-security/additional-security.component';
+import { SetupProfileComponent } from './setup-profile/setup-profile.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ProfileAddressComponent } from './profile-address/profile-address.component';
+import { DesktopHaddingComponent } from './desktop-hadding/desktop-hadding.component';
+import { AdditionalInformationComponent } from './additional-information/additional-information.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { RedemptionDetailsComponent } from './redemption-details/redemption-details.component';
+import { LoyaltyStatementsComponent } from './loyalty-statements/loyalty-statements.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { YourPasscodeComponent } from './your-passcode/your-passcode.component';
+import { RequestAmountComponent } from './request-amount/request-amount.component';
+import { LoanApplicationComponent } from './loan-application/loan-application.component';
+import { SuccessfulComponent } from './successful/successful.component';
+import { ApplicationStatusComponent } from './application-status/application-status.component';
+import { RedemptionComponent } from './redemption/redemption.component';
+import { CashbackModeComponent } from './cashback-mode/cashback-mode.component';
+import { MobileRechargeComponent } from './mobile-recharge/mobile-recharge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResponsiveSidenavComponent
+    ResponsiveSidenavComponent,
+    LanguageComponent,
+    LoginMobileComponent,
+    TermsConditionsComponent,
+    VerificationOtpComponent,
+    AdditionalSecurityComponent,
+    SetupProfileComponent,
+    CustomerProfileComponent,
+    ProfileAddressComponent,
+    DesktopHaddingComponent,
+    AdditionalInformationComponent,
+    TransactionDetailsComponent,
+    RedemptionDetailsComponent,
+    LoyaltyStatementsComponent,
+    LandingPageComponent,
+    YourPasscodeComponent,
+    RequestAmountComponent,
+    LoanApplicationComponent,
+    SuccessfulComponent,
+    ApplicationStatusComponent,
+    RedemptionComponent,
+    CashbackModeComponent,
+    MobileRechargeComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +109,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatSliderModule,
     MatSlideToggleModule,
+    MatNativeDateModule,
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -79,7 +129,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxOtpInputModule,
+    NgxChartsModule,
+    NgxEchartsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

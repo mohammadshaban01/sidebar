@@ -1,0 +1,80 @@
+@import "/src/assets/scss/import";
+
+.application-status {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: calc(100vh - 0rem);
+    padding-bottom: $base-size * 15;
+    margin: 0 $base-size * 5;
+
+    h2 {
+        font-size: $base-size * 12;
+        font-weight: bold;
+        padding: $base-size * 24 0 $base-size * 8 0;
+    }
+
+    .status-card {
+        background: $primary;
+        min-height: $base-size * 60;
+        border-radius: $base-size * 4;
+        padding: $base-size * 6 $base-size * 8 0 $base-size * 8;
+
+        .status-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $white;
+
+            .approved {
+                background: $approved;
+                font-size: $base-size * 6;
+                padding: $base-size * 1.6 $base-size * 6;
+                border-radius: $base-size * 8;
+                button {
+                    color: $white;
+                }
+            }
+
+            .pending {
+                @extend .approved;
+                background: $pending;
+            }
+            .rejected {
+                @extend .approved;
+                background: $rejected;
+            }
+
+            h3 {
+                margin-bottom: 0;
+                font-size: $base-size * 10;
+                font-weight: 600;
+            }
+            h4 {
+                margin-bottom: 0;
+                font-size: $base-size * 8;
+            }
+            P {
+                margin-bottom: 0;
+                font-size: $base-size * 6;
+            }
+        }
+    }
+    .status-remark {
+        h6{
+            color: $gray-500;
+            font-size: $base-size*7;
+            padding: $base-size*4 $base-size*2;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .application-status {
+        h2 {
+            display: none !important;
+        }
+    }
+}

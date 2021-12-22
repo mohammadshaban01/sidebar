@@ -1,0 +1,28 @@
+<div class="login-mobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">   
+
+                <button routerLink="/your-passcode">></button>
+
+                <div class="enter-mobile">
+                    <div>
+                        <h2>Verification</h2>
+                        <p>Enter verification OTP sent to</p>
+                        <p>+91 9999883379</p>
+                        <div class="mobile-otp">
+                            <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+                            </ngx-otp-input>
+                        </div>
+                        <div class="next">
+                            <button class="theme-btn" mat-button routerLink="/additional-security">VERFIY</button>
+                        </div>
+                        <div class="terms">
+                            <p>Resend OTP in 0:59</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

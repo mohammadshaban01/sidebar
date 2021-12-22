@@ -1,0 +1,124 @@
+@import "/src/assets/scss/import";
+
+.transaction-details {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: calc(100vh - 0rem);
+    padding-bottom: $base-size * 15;
+    margin: 0$base-size * 5;
+
+    h2{
+        font-size: $base-size*12;
+        font-weight: bold;
+        padding: $base-size*24 0 $base-size*8 0;
+    }
+
+    .transaction {
+        margin-bottom: $base-size*30;
+
+        h2 {
+            font-size: $base-size * 12;
+            font-weight: bold;
+            padding: $base-size * 24 0 $base-size * 16 0;
+        }
+    
+        .filter {
+            position: relative;
+    
+            input {
+                color: $font-color;
+                padding-left: $base-size * 22;
+            }
+            span {
+                position: absolute;
+                top: $base-size * 2;
+                left: $base-size * 7;
+            }
+    
+            .form-control {
+                line-height: $base-size * 6;
+                border-radius: $base-size * 4;
+    
+                &::placeholder {
+                    // padding-left: $base-size*17.5;
+                    font-size: $base-size * 7;
+                }
+            }
+        }
+    
+        .echart {
+            height: $base-size * 110;
+            margin-bottom: $base-size*10;
+        }
+    
+        .cash {
+            padding: 0 $base-size * 3;
+            margin-bottom: $base-size*16;
+    
+            h6 {
+                font-size: $base-size * 7;
+                color: $had-font-color;
+                text-align: center;
+            }
+            .cash-inner {
+                margin-top: $base-size*6;
+
+                h5{
+                    font-size: $base-size * 6;
+                    color: $card-font-color;
+                    margin-bottom: $base-size * 2;
+                }
+                
+                .success {
+                    display: flex;
+                    align-items: baseline;
+    
+                    button {
+                        font-size: $base-size * 6;
+                        color: $had-font-color;
+                        margin-bottom:0;
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .cash-card {
+                    background: $white;
+                    min-height: $base-size * 25;
+                    border: $base-size * 0.5 solid $card-border-color;
+                    border-radius: $base-size * 4;
+    
+                    .cash-withdrawal {
+                        display: flex;
+                        h3 {
+                            font-size: $base-size * 7;
+                            color: $card-font-color;
+                            font-weight: $font-weight-semi-bold;
+                            padding: $base-size * 2.5 $base-size * 8;
+                            margin-bottom: 0;
+                        }
+                        h4 {
+                            font-size: $base-size * 6;
+                            font-weight: normal;
+                            @extend h3;
+                            padding: 0 $base-size*7.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .transaction-details {
+        h2 {
+            display: none !important;
+        }
+        .echart{
+            margin-bottom: 0!important;
+        }
+    }
+}

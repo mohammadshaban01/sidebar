@@ -13,7 +13,10 @@ export class ResponsiveSidenavComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   
-  constructor(private observer: BreakpointObserver) { }
+  res: any ;
+  constructor(private observer: BreakpointObserver) {
+    
+   }
 
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
@@ -25,6 +28,7 @@ export class ResponsiveSidenavComponent implements OnInit {
         this.sidenav.open();
       }
     });
+    
   }
 
 

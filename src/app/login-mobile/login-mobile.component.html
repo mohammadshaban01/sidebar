@@ -1,0 +1,32 @@
+<div class="login-mobile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                
+                <button routerLink="/verification-otp">></button>
+
+                <div class="enter-mobile">
+                    <div>
+                        <h2>
+                            To login please enter your <br>
+                            Mobile Number
+                        </h2>
+                        <div class="mobile">
+                            <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+                            </ngx-otp-input>
+                        </div>
+                        <div class="next">
+                            <button class="theme-btn" mat-button routerLink="/verification-otp">NEXT</button>
+                        </div>
+                        <div class="terms">
+                            <p>By proceeding, you agree to our
+                                <button routerLink="/terms-conditions">Terms and Conditions <span>and</span> Privacy Policy</button>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

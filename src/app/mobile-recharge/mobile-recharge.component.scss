@@ -1,0 +1,77 @@
+@import "/src/assets/scss/import";
+
+.mobile-recharge {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+    h2 {
+        font-size: $base-size * 12;
+        font-weight: bold;
+        padding: $base-size * 24 0 $base-size * 8 0;
+        margin: 0$base-size * 5;
+    }
+
+    .recharge {
+        position: relative;
+        padding: 0 $base-size * 8;
+
+        .contacts {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        h3 {
+            font-size: $base-size * 10;
+            font-weight: bold;
+            margin-top: $base-size * 24;
+        }
+        p {
+            font-size: $base-size * 6;
+        }
+
+        .recharge-card {
+            background: $primary;
+            min-height: $base-size * 52;
+            padding: $base-size * 7;
+            border-radius: $base-size*4;
+
+            .recharge-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h4 {
+                    font-size: $base-size * 7;
+                    font-weight: 500;
+                    color: $white;
+                    line-height: $base-size * 10;
+                }
+                h5 {
+                    font-size: $base-size * 12;
+                    color: $white;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+                button.select {
+                    background: $secondery;
+                    min-width: $base-size * 38;
+                    min-height: $base-size*12;
+                    font-size: $base-size * 6;
+                    color: $white;
+                    border-radius: $base-size*8;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-recharge {
+        h2 {
+            display: none !important;
+        }
+    }
+}

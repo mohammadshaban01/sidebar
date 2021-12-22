@@ -1,0 +1,106 @@
+<div class="landing-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="logo text-end">
+                    <img src="assets/images/bg/india_logo.png" width="80" alt="Logo">
+                </div>
+                <div class="slider">
+                    <ng-image-slider #nav [images]="imageObject" [infinite]="true" [autoSlide]="3"
+                        [imageSize]="{width: '93.8%'}" slideImage="1">
+                    </ng-image-slider>
+                </div>
+
+                <div class="summary">
+                    <div class="row gx-0">
+                        <h2>Loyalty Summary</h2>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner loyalty-bg">
+                                <div>
+                                    <p>Loyalty Points
+                                        <br> Earned
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5>30</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner cashback-bg">
+                                <div>
+                                    <p>Cashback
+                                        <br> Earned
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5><span>₹</span>12</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner points-bg">
+                                <div>
+                                    <p>Points
+                                        <br>
+                                        Redeemed
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5>650</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner points-eligible">
+                                <div>
+                                    <p>Points Eligible for
+                                        <br>Redemption
+                                    </p>
+                                </div>
+                                <div>
+                                    <h5>1000</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary">
+                    <div class="row gx-0">
+                        <h2>Quick Links</h2>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner quick">
+                                <div>
+                                    <p>Apply for
+                                        <br>Loan
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-6 col-lg-4 col-xl-4 m-b-8">
+                            <div class="summary-inner quick">
+                                <div>
+                                    <button routerLink="/dashbord/customer-profile">
+                                        <p>Loan
+                                            <br> Application
+                                            <br>Status
+                                        </p>
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

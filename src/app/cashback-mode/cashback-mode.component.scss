@@ -1,0 +1,142 @@
+@import "/src/assets/scss/import";
+
+.cashback-mode {
+    background-image: url(/assets/images/bg/white-background-1.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    min-height: 100vh;
+
+    h2 {
+        font-size: $base-size * 12;
+        font-weight: bold;
+        padding: $base-size * 24 0 $base-size * 8 0;
+        margin: 0$base-size * 5;
+    }
+
+    .choose {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+        margin: 0$base-size * 5;
+
+        h3 {
+            font-size: $base-size * 8;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        .mat-radio-button ~ .mat-radio-button {
+            margin-left: 16px;
+        }
+
+        .choose-radio {
+            display: flex;
+            flex-direction: row;
+            margin-top: $base-size * 8;
+            .radio-1 {
+                margin-right: $base-size * 25;
+            }
+        }
+    }
+
+    .bank-had {
+        margin: 0 $base-size * 5;
+        margin-top: $base-size * 13;
+        h4 {
+            font-size: $base-size * 10;
+            font-weight: bold;
+            span {
+                margin-right: $base-size * 4;
+            }
+        }
+    }
+    .bank {
+        overflow-x: scroll;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll;
+        margin: 0 $base-size * 5;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .bank-card {
+            display: inline-flex;
+            margin-top: $base-size * 17;
+
+            .bank-details {
+                width: $base-size*140;
+                min-height: $base-size * 76;
+                background: $fot-bd;
+                border-radius: $base-size * 4;
+                margin-right: $base-size * 4;
+                padding: $base-size * 6;
+                position: relative;
+
+                h5 {
+                    font-size: $base-size * 8;
+                    font-weight: 600;
+                    span {
+                        margin-left: $base-size * 2;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .add-btn {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .bank-tab {
+        background:$tab-bg;
+        min-height: $base-size*75;
+        margin: $base-size * 16 0 0 0;
+
+        .bank-details {
+            padding: $base-size * 8 0 0 $base-size * 16;
+
+            h4 {
+                font-size: $base-size * 8;
+                font-weight: normal;
+            }
+            h5 {
+                font-size: $base-size * 7;
+                font-weight: 400;
+                color: $gray-400;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cashback-mode {
+        h2 {
+            display: none !important;
+        }
+
+        .choose {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h3 {
+                font-size: $base-size * 8;
+            }
+            .mat-radio-button ~ .mat-radio-button {
+                margin-left: 16px;
+            }
+
+            .choose-radio {
+                display: flex;
+                flex-direction: column;
+
+                .radio-1 {
+                    margin-right: 0;
+                    margin-bottom: $base-size * 6;
+                }
+            }
+        }
+    }
+}

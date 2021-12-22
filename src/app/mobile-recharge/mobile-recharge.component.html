@@ -1,0 +1,62 @@
+<div class="mobile-recharge">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2>Cashback Mode</h2>
+
+                <div class="recharge m-t-32">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter Mobile Number</mat-label>
+                        <mat-select>
+                            <mat-option value="one">First </mat-option>
+                            <mat-option value="two">Second</mat-option>
+                        </mat-select>
+                        <button class="contacts"> <img src="assets/images/icons/contacts.svg" alt="contacts"></button>
+                    </mat-form-field>
+
+                    <h3>Recharges Available for you</h3>
+                    <p>These are the different recharge plans avaulable on the
+                        amount which you have redeemed.</p>
+
+                    <div class="row gx-3">
+                        <div class="col-md-12 col-lg-12 col-xl-6 m-b-15" *ngFor=" let data of status">
+                            <div class="recharge-card">
+                                <div class="recharge-list">
+                                    <div>
+                                        <h4>Talktime: ₹0 <br>
+                                            Validity: 28 days
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <button>
+                                            <img src="assets/images/icons/chevron_right.svg" width="24"
+                                                alt="chevron_right">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="recharge-list">
+                                    <div>
+                                        <h5>₹ 29
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <button class="select">
+                                            Select
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

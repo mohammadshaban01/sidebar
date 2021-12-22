@@ -1,0 +1,59 @@
+<div class="setup-profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="flex-center">
+                    <div>
+                        <h2>Hi 999999999</h2>
+                        <div class="camera">
+                           
+                            <label for="upload" class="upload-img">
+                                <img [src]="_d.bypassSecurityTrustUrl(imgsrc)">
+                            </label>
+                            <input id="upload" type="file" (change)="fileChange($event)">
+                        </div>
+
+
+
+
+                        <div class="profile">
+                            <p>Setup your profile</p>
+
+                            <div class="security">
+                                <form>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Last Name</mat-label>
+                                        <input matInput>
+                                    </mat-form-field>
+                                    <mat-form-field>
+                                        <mat-select placeholder="Gender">
+                                            <mat-option value="male"> Male </mat-option>
+                                            <mat-option value="female"> Female </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Enter your email</mat-label>
+                                        <input matInput placeholder="pat@example.com" type="email">
+                                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                                    </mat-form-field>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Phone number</mat-label>
+                                        <input matInput placeholder="09999999999" required>
+                                        <mat-icon matSuffix>phone</mat-icon>
+                                    </mat-form-field>
+                                    <div class="text-center m-t-10 m-b-12">
+                                        <button class="theme-btn" mat-button routerLink="/dashbord/landing-page">CONTINUE</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>

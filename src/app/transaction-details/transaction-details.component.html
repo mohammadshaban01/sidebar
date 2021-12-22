@@ -1,0 +1,72 @@
+<div class="transaction-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h2> Transaction Details</h2>
+                <div class="transaction">
+                    <div class="filter">
+                        <form action="">
+                            <div class="m-t-12">
+                                <span><img src="/assets/images/icons/filter_list.svg" width="18" alt="filter"></span>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Filter">
+                            </div>
+                        </form>
+                    </div>
+
+                    <button routerLink="/dashbord/redemption-details">></button>
+                    
+                    <div class="echart">
+                        <div echarts [options]="chartOption"></div>
+                    </div>
+
+                    <div class="row gx-1">
+                        <div class="col-md-12 col-lg-12 col-xl-6" *ngFor=" let data of month">
+                            <div class="cash">
+                                <h6>11 September 2021</h6>
+
+                                <div class="cash-inner" *ngFor=" let data of list">
+                                    <div class="success">
+                                        <div class="flex-1">
+                                            <p><img src="assets/images/icons/check.png" width="12" alt="check"> Success
+                                            </p>
+                                        </div>
+                                        <div class="flex-1 text-end">
+                                            <!-- <p>Success</p> -->
+                                        </div>
+                                    </div>
+                                    <div class="cash-card">
+                                        <div class="cash-withdrawal">
+                                            <div class="flex-1">
+                                                <h3>Cash Withdrawal</h3>
+                                            </div>
+                                            <div class="flex-1 text-end">
+                                                <h3>- Rs 300</h3>
+                                            </div>
+                                        </div>
+                                        <div class="cash-withdrawal">
+                                            <div class="flex-1">
+                                                <h4>11:36 AM</h4>
+                                            </div>
+                                            <div class="flex-2 text-end">
+                                                <h4>ATM ID: 00000000; Place name</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,15 +1,47 @@
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,900&display=swap");
+
+// @font-face {
+//     font-family: 'DINProMedium_13936';
+//     src: url('/assets/fonts/DINProMedium_13936.eot');
+//     src: url('/assets/fonts/DINProMedium_13936.eot') format('embedded-opentype'),
+//          url('/assets/fonts/DINProMedium_13936.woff2') format('woff2'),
+//          url('/assets/fonts/DINProMedium_13936.woff') format('woff'),
+//          url('/assets/fonts/DINProMedium_13936.ttf') format('truetype'),
+//          url('/assets/fonts/DINProMedium_13936.svg#DINProMedium_13936') format('svg');
+// }
+@font-face {
+    font-family: "DDINPRO400Regular";
+    src: url("/assets/fonts/DDINPRO400Regular.eot");
+    src: url("/assets/fonts/DDINPRO400Regular.eot") format("embedded-opentype"),
+        url("/assets/fonts/DDINPRO400Regular.woff2") format("woff2"),
+        url("/assets/fonts/DDINPRO400Regular.woff") format("woff"),
+        url("/assets/fonts/DDINPRO400Regular.ttf") format("truetype"),
+        url("/assets/fonts/DDINPRO400Regular.svg#DDINPRO400Regular") format("svg");
+}
+
+/* You can add global styles to this file, and also import other style files */
+/*-------------------------------------------------------------------------------------------
+  CSS Padding & Margin 1 to 100px Top, Bottom, Left, Right 
+-------------------------------------------------------------------------------------------*/
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "./assets/scss/import";
+
+// $gray-400: #f3f4f6 ;
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here
+
 /* RESET */
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
 }
 
 /*-------------------------------------------------------------------------------------------
@@ -34,7 +66,6 @@ $spaceamounts: (
     16,
     17,
     18,
-
     19,
     20,
     21,
@@ -188,19 +219,324 @@ ul {
     }
 }
 
-button{
+button {
     background: transparent;
+    // border-radius: $base-size * 8!important;
 }
+
+// Flex CLass /////
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+.flex-5 {
+    flex: 5;
+}
+
 /*-------------------------------------------------------------------------------------------
   CSS definations for 
 -------------------------------------------------------------------------------------------*/
 
-html, body { 
-    height: 100%; 
-    font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-	color:#000;
+html,
+body {
+    height: 100%;
+    // font-family: "Roboto", sans-serif!important;
+    // font-family: 'DINProMedium_13936'!important;
+    font-family: "DDINPRO400Regular";
+    font-size: $base-font-size !important;
+    color: $font-color !important;
+    background: $white;
 }
+
+/* width */
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(160, 160, 160);
+}
+
+.btn {
+    width: $base-size * 96;
+    height: $base-size * 20;
+    background: $secondery;
+}
+button.theme-btn {
+    width: $base-size * 96;
+    height: $base-size * 20;
+    color: $white;
+    font-family: "DDINPRO400Regular";
+    font-size: $base-font-size;
+    background: $secondery;
+    border-radius: $base-size * 12.5;
+}
+
 .mat-button-focus-overlay {
-    background:none;
+    background: none;
+}
+
+.mobile {
+    .ngx-otp-input-box {
+        margin: 0 $base-size * 1 !important;
+    }
+    .ngx-otp-input {
+        width: 90% !important;
+        border-radius: 0 !important;
+        border: none !important;
+        border-bottom: $base-size * 0.5 solid $white !important;
+        background: transparent !important;
+        color: $white;
+    }
+}
+
+.mobile-otp {
+    .ngx-otp-input-box {
+        margin: 0 $base-size * 1 !important;
+    }
+    .ngx-otp-input-container {
+        justify-content: center;
+    }
+    .ngx-otp-input {
+        border-radius: 0 !important;
+        border: none !important;
+        border-bottom: $base-size * 0.5 solid $white !important;
+        background: transparent !important;
+        color: $white;
+    }
+}
+
+.additional {
+    .ngx-otp-input {
+        width: $base-size * 13 !important;
+        height: $base-size * 16 !important;
+    }
+    .ngx-otp-input-box {
+        margin: 0 $base-size * 2 !important;
+    }
+    .ngx-otp-input-container {
+        justify-content: center;
+    }
+    .ngx-otp-input {
+        border-radius: $base-size * 2 !important;
+        border: none !important;
+        border-bottom: $base-size * 0.5 solid $white !important;
+        background: $white !important;
+        color: $font-color;
+    }
+}
+
+/////////// Flex Center //////////////////
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mat Form Field Css
+.mat-form-field {
+    width: 100%;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background: none;
+    padding: 0 !important;
+}
+
+//mat-input focused color
+// ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+//     color: red!important;
+// }
+
+//input outline color
+.mat-form-field.mat-focused {
+    .mat-form-field-label {
+        color: $primary;
+    }
+    .mat-form-field-ripple {
+        background-color: $primary;
+    }
+    .mat-form-field-required-marker {
+        color: $primary;
+    }
+    .mat-input-element {
+        color: $font-color;
+    }
+}
+
+.mat-form-field-label {
+    color: $font-color;
+}
+mat-datepicker-toggle {
+    color: $primary !important;
+}
+.mat-calendar-body-selected {
+    background-color: $primary;
+    width: 20px;
+}
+
+// fix footer
+.fixed-bottom {
+    background: $white;
+    border-top: $base-size * 0.5 solid $fot-bd;
+}
+
+.ng-image-slider .ng-image-slider-container .main .main-inner .img-div {
+    border: 1px solid #ccc;
+}
+.ng-image-slider .ng-image-slider-container .main {
+    height: 100% !important;
+}
+.ng-image-slider .ng-image-slider-container .main .next,
+.ng-image-slider .ng-image-slider-container .main .prev {
+    display: none;
+}
+
+.security {
+    .mat-form-field.mat-focused {
+        .mat-form-field-label {
+            color: $white;
+        }
+        .mat-form-field-ripple {
+            background-color: $white !important;
+        }
+        .mat-form-field-required-marker {
+            color: $white;
+        }
+        .mat-input-element {
+            color: $white;
+        }
+    }
+
+    .mat-form-field-appearance-fill .mat-form-field-underline::before {
+        background: $white;
+    }
+    .mat-form-field-label {
+        color: $white;
+    }
+    .mat-icon {
+        color: $white;
+    }
+    .mat-select-arrow {
+        color: $white;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: $white;
+    }
+}
+
+.mat-accent .mat-slider-track-fill,
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label {
+    background: $primary !important;
+}
+
+.mat-form-field-empty.mat-form-field-label,
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    font-weight: 500;
+}
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: $primary !important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: $primary !important;
+}
+
+.lone-list {
+    .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: $white !important;
+    }
+    .mat-checkbox-background {
+        border: $base-size * 1 solid$white !important;
+        background-color: transparent !important;
+    }
+    .mat-checkbox-checked {
+        .mat-checkbox-checkmark {
+            background: $white !important;
+            .mat-checkbox-checkmark-path {
+                stroke: $primary !important;
+                stroke-width: 3px !important;
+            }
+        }
+    }
+}
+
+// Radio button/
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: $primary;
+    height: $base-size * 8;
+    width: $base-size * 8;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    color: $primary;
+    background-color: $primary;
+    height: $base-size * 8;
+    width: $base-size * 8;
+}
+.mat-radio-outer-circle {
+    height: $base-size * 8 !important;
+    width: $base-size * 8 !important;
+}
+.mat-radio-label {
+    font-size: $base-size * 7 !important;
+}
+.mat-radio-container {
+    top: $base-size * 2;
+}
+.mat-radio-label-content {
+    padding-left: $base-size * 8 !important;
+}
+
+.bank-tab {
+    .mat-tab-label {
+        width: $base-size * 90 !important;
+    }
+    .mat-tab-group.mat-primary .mat-ink-bar,
+    .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+        background: $primary !important;
+    }
+}
+
+.recharge {
+    .mat-select-arrow {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .fixed-bottom {
+        text-align: center;
+    }
+    .ng-image-slider .ng-image-slider-container .main {
+        height: 66% !important;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    body {
+        font-size: 100vw;
+    }
 }

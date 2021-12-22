@@ -1,34 +1,51 @@
-
 @import "/src/assets/scss/import";
 
 mat-toolbar {
-    background: #004a9f;
-    color: white;
+    // background: none;
+    // margin-top: $base-size*22;
+    // margin: 0 0 0 320px;
+    display: none;
+    .mat-icon-button i, .mat-icon-button .mat-icon {
+        line-height: 15px;
+    }
 }
 
 mat-sidenav-container {
-    height: calc(100vh - 65px);
+    height: calc(100vh - 0rem);
+
+    .main-logo {
+        display: flex;
+        align-items: center;
+    }
 
     mat-sidenav {
-        margin: 16px;
-        width: 200px;
+        // margin: 16px;
+        width: $base-size * 134;
         border-right: none;
-        background: #002b5c;
-        color: white;
-        border-radius: 10px;
-        padding: 16px;
+        background: $white;
+        color: $white;
         text-align: center;
+        box-shadow: 0px 1px 16px rgb(204 204 204);
 
-        .avatar {
-            margin-top: 16px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-
-        .name {
-            margin-top: 8px;
-            font-weight: normal;
+        .profile-pic {
+            height: $base-size * 44;
+            background: $primary;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            h4 {
+                font-size: $base-size * 8;
+                margin-bottom: 0;
+            }
+            span {
+                font-size: $base-size * 7;
+            }
+            .avatar {
+                margin: $base-size * 8 $base-size * 16 $base-size * 8 $base-size * 8;
+                width: $base-size * 28;
+                height: $base-size * 28;
+                border-radius: 50%;
+            }
         }
 
         .designation {
@@ -42,10 +59,6 @@ mat-sidenav-container {
             align-items: center;
             justify-content: flex-start;
             font-size: 1rem;
-
-            mat-icon {
-                margin-right: 8px;
-            }
         }
         mat-divider {
             margin-top: 16px;
@@ -53,66 +66,65 @@ mat-sidenav-container {
             background-color: rgba(255, 255, 255, 0.5);
         }
         .side-bar-nav {
-
             nav {
-               ul{
-                  padding: 0;
-               }
+                ul {
+                    padding: 0;
+                }
                 .mainmenu {
-        
+                    margin-top: $base-size * 16;
+
                     button {
                         width: 100%;
                         text-align: left;
-                        color: #fff;
+                        font-family: "DDINPRO400Regular";
+                        font-size: $base-size * 9;
+                        color: $font-color;
                         display: block;
-                        padding:0 $base-size*8 0 $base-size*10;
-                        line-height:$base-size*20;
-        
-                        &:first-child {
-                            border-bottom: $base-size*0.1 solid blue;
-                        }
-        
-                        img {
-                            float: right;
-                            padding: $base-size*9 0 0 0;
+                        padding: 0 $base-size * 8 0 $base-size * 2;
+                        line-height: $base-size * 25.5;
+
+                        // &:first-child {
+                        //     border-bottom: $base-size*0.1 solid #2e87c7;
+                        // }
+
+                        svg {
+                            margin: 0 $base-size * 9 0 $base-size * 12.5;
                         }
                     }
 
-                    li{
-                        button{
-                           span{
-                              font-size: $base-size*7;
-                              font-weight: normal;
-                           }
+                    li {
+                        &:hover {
+                            background: $gray-500;
+                            .submenu {
+                                display: block;
+                                max-height: $base-size * 100;
+                            }
                         }
                     }
-        
-                    li:hover .submenu {
-                        display: block;
-                        max-height: $base-size*100;
-                    }                
-        
+
                     .submenu {
                         overflow: hidden;
                         max-height: 0;
-                        -webkit-transition: all 0.5s ease-out;
+                        transition: all 0.5s ease-out;
 
-      
-                        button {
-                            background: #4978bb;
-                            color: #fff;
-                            padding-left: $base-size*28;
-                            border-radius: 0;
-        
-                            &:hover {
-                                background: $primary;
-                                color: #fff;
-                                line-height: $base-size*20;
-                            }
-        
-                            img {
-                                float: left;
-                                padding: $base-size*8 $base-size*8 0 $base-size*5;
+                        li {
+                            button {
+                                background: $gray-400;
+                                font-size: $base-size * 6;
+                                color: $font-color;
+                                padding-left: $base-size * 38;
+                                border-radius: 0;
+                                line-height: $base-size * 16;
+
+                                // &:hover {
+                                //     background: $primary;
+                                //     color: #fff;
+                                //     line-height: $base-size * 20;
+                                // }
+
+                                &:last-child {
+                                    padding-bottom: $base-size * 10;
+                                }
                             }
                         }
                     }
@@ -123,17 +135,33 @@ mat-sidenav-container {
 }
 mat-sidenav-content {
     .content {
-        height: calc(100vh - 98px);
-        border-radius: 10px;
-        margin: 16px;
-        margin-left: 32px;
+        height: calc(100vh - 90px);
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+         // Footer Fix
+         .fixed-bottom {
+            padding: $base-size * 8 0;
+            text-align: center;
+            margin-left: $base-size*135;
 
-        font-size: 2rem;
-        color: lightgray;
+            button {
+                border-radius: $base-size * 8;
+            }
+        }
     }
 }
-          
+
+@media only screen and (max-width: 768px) {
+    mat-toolbar {
+        background: none;
+        background-image: url(/assets/images/bg/white-background-1.jpg);
+        background-repeat: repeat;
+        background-size: 100%;
+        padding-top: $base-size * 22 !important;
+        padding-bottom: $base-size*18.5;
+        display: block;
+    }
+
+    .fixed-bottom  {
+        margin-left: 0!important;
+     }
+}
